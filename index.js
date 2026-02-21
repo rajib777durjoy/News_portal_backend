@@ -9,7 +9,10 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8000;
-app.use(cors());
+app.use(cors({
+    origin:['https://news-portal-frontend-3r4v.onrender.com'],
+    credentials:true,
+}));
 
 // use node corn for 1 hours after refresh // 
 // 0 * * * * one min         0 * * * * one hour
