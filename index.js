@@ -78,7 +78,7 @@ app.patch("/api/newsSearch", async (req, res) => {
         // Text search on title or description
         if (text) {
             filter.$or = [
-                { title: { $regex: text, $options: "i" } }, // case-insensitive
+                { title: { $regex: text, $options: "i" } }, 
                 { description: { $regex: text, $options: "i" } },
             ];
         }
